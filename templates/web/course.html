@@ -1,0 +1,144 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Course Details page</h2>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>/</li>
+                        <li>course details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Details Section -->
+    <div class="course-details-section padding-top-120 padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <!-- Blog Item -->
+                    <article class="course-item">
+                        <div class="coures-image">
+                            <img src="{{course.image.url}}" alt="course">
+                        </div>
+                        <div class="course-content margin-top-30">
+                            <h3>{{course.title}}</h3>
+                            <p class="margin-top-20">{{course.description|safe}}</p>
+                        </div>
+
+                        <div class="course-tab margin-top-30">
+
+                            <div class="tab-content">
+                                <div class="tab-four-content">
+                                    <div class="single-item">
+                                        <ul class="margin-top-20">
+                                            {% for f in course_features %}
+                                            <li><i class="fa fa-check-square-o"></i>{{f.title}}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="course-tab margin-top-30">
+                            <div class="tab-accordion">
+                                <div class="tab">
+                                    <ul>
+                                        <li class="tab-one active">Overview</li>
+                                        <li class="tab-two">Training Structure</li>
+                                        <li class="tab-three">Eligibility</li>
+                                        <li class="tab-four">Facilities</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab-content">
+                                {% for value in overview %}
+                                <div class="tab-one-content content-hide active">
+                                    <div class="single-item">
+                                        <p class="margin-top-20">{{ value.description|safe }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                <div class="tab-two-content content-hide">
+                                {% for value in training_structure %}
+                                    <div class="single-item">
+                                        <p class="margin-top-20">{{ value.description|safe }}</p>
+                                        
+                                    </div>
+                                {% endfor %}
+                                </div>
+                                <div class="tab-three-content content-hide">
+                                {% for value in eligibility %}
+                                    <div class="single-item">
+                                        <p class="margin-top-20">{{ value.description|safe }}</p>
+                                        
+                                    </div>
+                                {% endfor %}
+                                </div>
+                                <div class="tab-four-content content-hide">
+                                {% for value in facilities %}
+                                    <div class="single-item">
+                                        <p class="margin-top-20">{{ value.description|safe }}</p>
+                                        
+                                    </div>
+                                {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Blog Sidebar Area -->
+                <div class="col-lg-4">
+                    <aside class="widget-area coures-sidebar">
+                        <div class="course-info widget-style">
+                            <div class="widget-title">
+                                <h4><span>course fee</span><span class="course-price">$290</span></h4>
+                            </div>
+                            <ul>
+                                {% for d in course_details %}
+                                <li style="display: flex;flex-direction: column;">
+                                    <span class="info-list"><i class="fa fa-folder-open"></i>{{d.first}}</span>
+                                    <span style="padding-left: 26px;">{{d.second}}</span>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            <div class="course-button margin-top-30">
+                                <a href="#" class="template-btn" data-toggle="modal" data-target="#exampleModalScrollable">take course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>blog page</h2>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>/</li>
+                        <li>blog</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section blog-page padding-top-115 padding-bottom-120">
+        <div class="container">
+            <div class="row">
+                {% for blog in object_list %}
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".1s">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="{{ blog.get_absolute_url }}"><img src="{{blog.image.url}}" alt="image"></a>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-title">
+                                <h4><a href="{{ blog.get_absolute_url }}">{{blog.title|truncatechars:25 }}</a></h4>
+                            </div>
+                            <div class="content-wrap">
+                                <a href="{{ blog.get_absolute_url }}" class="post-tag">{{ blog.date|date:"d, M, Y" }}</a>
+                            </div>
+                            <div class="blog-button">
+                                <a href="{{ blog.get_absolute_url }}" class="template-btn btn-2">view more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+
+{% endblock %}

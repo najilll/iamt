@@ -1,0 +1,139 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Blog Details page</h2>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>/</li>
+                        <li>blog details</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Details Section -->
+    <div class="blog-details-section padding-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    <!-- Blog Item -->
+                    <article class="blog-item">
+                        <div class="blog-image">
+                            <img src="{{ object.image.url }}" alt="blog" style="width: 100%;
+                            height: 400px;
+                            display: block;
+                            background-position: center;
+                            object-fit: cover;">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta margin-top-30">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-calendar"></i>{{ object.date|date:"d, M, Y" }}</a></li>
+                                </ul>
+                            </div>
+                            <h3 class="title">{{ object.title }}</h3>
+                            <p class="margin-top-20">{{object.description|safe}}</p>
+
+                            
+
+                            
+
+                            <div class="blog-quote margin-top-30">
+                                <span>“Long established fact that a reader will be not distracted by the readable
+                                    content of a page”</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Comments Area -->
+                    
+
+                    <!-- Blog Comments Form -->
+                    
+                </div>
+
+                <!-- Blog Sidebar Area -->
+                <div class="col-lg-4">
+                    <aside class="widget-area blog-sidebar">
+                       
+
+                        <div class="widget-recent-post widget-style">
+                            <div class="widget-title">
+                                <h4 class="title">recent posts</h4>
+                            </div>
+                            <div class="single-recent-post">
+                                <div class="post-image">
+                                    <img src="assets/images/recent-post-1.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <span>20 Oct 2020</span>
+                                    <a href="#">plan your new business strategy</a>
+                                </div>
+                            </div>
+                            <div class="single-recent-post">
+                                <div class="post-image">
+                                    <img src="assets/images/recent-post-2.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <span>14 sep 2020</span>
+                                    <a href="#">how to grow your business</a>
+                                </div>
+                            </div>
+                            <div class="single-recent-post">
+                                <div class="post-image">
+                                    <img src="assets/images/recent-post-3.png" alt="post">
+                                </div>
+                                <div class="post-content">
+                                    <span>20 june 2020</span>
+                                    <a href="#">how to increase your sales</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="widget-categories widget-style">
+                            <div class="widget-title">
+                                <h4 class="title">categories</h4>
+                            </div>
+                            <ul>
+                                <li><a href="#">accounting</a></li>
+                                <li><a href="#">art & design</a></li>
+                                <li><a href="#">development</a></li>
+                                <li><a href="#">prigramming</a></li>
+                                <li><a href="#">content writing</a></li>
+                            </ul>
+                        </div>
+
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,498 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Preloader Starts -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2>about page</h2>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li>/</li>
+                        <li>about</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+                    <span class="tagline">Learn Anything</span>
+                    <h2 class="margin-top-20">Benefit from our online learning about</h2>
+                    <p class="margin-top-20">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        Labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit ullamco</p>
+                    <ul class="margin-top-20">
+                        <li><span class="list-icon"><img src="{% static "web/images/bulb.png" %}" alt="icon"></span><span>Creative
+                                Study
+                                Pattern</span></li>
+                        <li><span class="list-icon"><img src="{% static "web/images/plane.png" %}" alt="icon"></span><span>Quick
+                                Crash
+                                Courses</span></li>
+                        <li><span class="list-icon"><img src="{% static "web/images/protractor.png" %}"
+                                    alt="icon"></span><span>Provided
+                                with Experimental Examples</span></li>
+                        <li><span class="list-icon"><img src="{% static "web/images/certificate.png" %}"
+                                    alt="icon"></span><span>Certification Awarded</span></li>
+                    </ul>
+                    <div class="about-button margin-top-40">
+                        <a href="course.html" class="template-btn">Discover New Courses</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+                    <div class="stylist-gallery">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="single-image image-1">
+                                    <img src="{% static "web/images/about-1.png" %}" alt="image">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="single-image image-2">
+                                    <img src="{% static "web/images/about-2.png" %}" alt="image">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="single-image image-3">
+                                    <img src="{% static "web/images/about-3.png" %}" alt="image">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="single-image image-4">
+                                    <img src="{% static "web/images/about-4.png" %}" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Section -->
+    {% comment %} <section class="course-section padding-top-115 padding-bottom-90">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Professional Online Courses</h2>
+                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-50">
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".1s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-1.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">marketing</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">James Stewart</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
+                                    Crash Course Zen</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 12 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$15.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".2s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-2.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">development</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">John doe</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Nvidia Technologies
+                                    Practice In University</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 20 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$20.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".3s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-3.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">accounting</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">hames itewart</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Become a professional designer with
+                                    passion</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 25 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$25.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".4s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-4.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">programming</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">alice mccoy</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Grow your business by some
+                                    Technique</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 25 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$30.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".5s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-5.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">art & design</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">rames tewart</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
+                                    Crash Course Zen</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 30 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$35.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".6s">
+                    <div class="single-course">
+                        <div class="course-image">
+                            <img src="web/images/course-6.png" alt="image">
+                        </div>
+                        <div class="course-content">
+                            <div class="course-category">
+                                <a href="course-details.html">content Writing</a>
+                            </div>
+                            <span class="course-instructor"><a href="course-details.html">James Stewart</a></span>
+                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
+                                    Crash Course Zen</a></h4>
+                            <div class="course-review d-flex align-items-center margin-top-20">
+                                <div class="review-left">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
+                                </div>
+                                <div class="review-right margin-left-30">
+                                    <span><b>4.5</b> (45 Reviews)</span>
+                                </div>
+                            </div>
+                            <span class="divider"></span>
+                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
+                                <div class="bottom-left">
+                                    <span><i class="fa fa-clock-o"></i> 30 mins</span>
+                                </div>
+                                <div class="bottom-right">
+                                    <span class="course-price">$25.00/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!-- Team Section -->
+    <section class="team-section padding-top-115 padding-bottom-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Meet Our Experts</h2>
+                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-50">
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{% static "web/images/team-member-1.png" %}" alt="image">
+                            <div class="hover-state">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">alex maxwel</h4>
+                            <span>CEO & Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{% static "web/images/team-member-2.png" %}" alt="image">
+                            <div class="hover-state">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">sarah taylor</h4>
+                            <span>Web Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{% static "web/images/team-member-3.png" %}" alt="image">
+                            <div class="hover-state">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">brandon king</h4>
+                            <span>ui ux designer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="single-team-member">
+                        <div class="member-image">
+                            <img src="{% static "web/images/team-member-1.png" %}" alt="image">
+                            <div class="hover-state">
+                                <ul>
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="member-content">
+                            <h4 class="title">john doe</h4>
+                            <span>digital marketer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>feedback from students</h2>
+                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feedback-slider margin-top-30">
+                {% for t in testimonial %}
+                <div class="single-feedback">
+                    <span class="quote-icon"><i class="fa fa-quote-right"></i></span>
+                    <div class="reviewer-info d-flex align-items-center">
+                        <div class="reviewer-image margin-right-20">
+                            <img src="{{t.image.url}}" alt="image">
+                        </div>
+                        <div class="reviewer-text">
+                            <h4 class="title">{{t.name}}</h4>
+                            <span class="designation">{{t.position}}</span>
+                        </div>
+                    </div>
+                    <p class="margin-top-20">{{t.description}}</p>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section padding-top-115 padding-bottom-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="section-top text-center">
+                        <h2>Latest Articles</h2>
+                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                            eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-slider margin-top-30">
+                {% for b in blogs %}
+                <div class="single-blog">
+                    <div class="blog-image">
+                        <a href="{{ b.get_absolute_url }}"><img src="{{ b.image.url }}" alt="image"></a>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-title">
+                            <h4><a href="{{ b.get_absolute_url }}">{{ b.title|truncatechars:25 }}</a></h4>
+                        </div>
+                        <div class="content-wrap">
+                            <a href="{{ b.get_absolute_url }}" class="post-tag">{{ b.date|date:"d, M, Y" }}</a>
+                        </div>
+                        <div class="blog-button">
+                            <a href="{{ b.get_absolute_url }}" class="template-btn btn-2">view more</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <!-- Back Top -->
+    <div class="back-to-top">
+        <span><i class="fa fa-angle-up"></i></span>
+    </div>
+{% endblock %}
