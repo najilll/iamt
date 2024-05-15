@@ -31,7 +31,7 @@
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    {% comment %} <section class="about-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
@@ -81,6 +81,43 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+    <section class="about-section about-section-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay=".1s">
+                    <div class="image-area">
+                        <img src="{% static 'web/images/home-2-about-image.jpg' %}" class="main-image" alt="image">
+                        <img src="{% static 'web/images/home-2-about-shape.png' %}" class="shape-image item-zooming" alt="shape">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
+                    <div class="about-content">
+                        <h2>Welcome to IAMT-Institute of Advanced Mobile and Tech</h2>
+                        <span class="divider"></span>
+                        <p>At IAMT, we are dedicated to shaping the future of mobile technology professionals. Located in Malappuram, Kerala, our institute offers top-tier training in smartphone servicing, backed by over 17 years of industry and technical expertise. Our comprehensive programs, led by certified trainers, cover advanced chip-level repairs and the latest in smartphone technology. We pride ourselves on providing a 100% job placement assurance, ensuring our graduates are equipped for success. With state-of-the-art facilities, practical on-the-job training, and additional courses in computer hardware and languages, IAMT is your gateway to a thriving career in mobile technology. Join us to transform your passion into a thriving career.</p>
+                        {% comment %} <ul class="margin-top-20">
+                            <li><span class="list-icon"><img src="{% static 'web/images/bulb-2.png' %}"
+                                        alt="icon"></span><span>Creative
+                                    Study
+                                    Pattern</span></li>
+                            <li><span class="list-icon"><img src="{% static 'web/images/plane-2.png' %}"
+                                        alt="icon"></span><span>Quick
+                                    Crash
+                                    Courses</span></li>
+                            <li><span class="list-icon"><img src="{% static 'web/images/protractor-2.png' %}"
+                                        alt="icon"></span><span>Provided
+                                    with Experimental Examples</span></li>
+                            <li><span class="list-icon"><img src="{% static 'web/images/certificate-2.png' %}"
+                                        alt="icon"></span><span>Certification Awarded</span></li>
+                        </ul> {% endcomment %}
+                        {% comment %} <div class="about-button margin-top-40">
+                            <a href="{% url "web:course" %}" class="template-btn">Discover New Courses</a>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </div>
@@ -453,41 +490,7 @@
     </section>
 
     <!-- Blog Section -->
-    <section class="blog-section padding-top-115 padding-bottom-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Latest Articles</h2>
-                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua</p>
-                    </div>
-                </div>
-            </div>
-            <div class="blog-slider margin-top-30">
-                {% for b in blogs %}
-                <div class="single-blog">
-                    <div class="blog-image">
-                        <a href="{{ b.get_absolute_url }}"><img src="{{ b.image.url }}" alt="image"></a>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-title">
-                            <h4><a href="{{ b.get_absolute_url }}">{{ b.title|truncatechars:25 }}</a></h4>
-                        </div>
-                        <div class="content-wrap">
-                            <a href="{{ b.get_absolute_url }}" class="post-tag">{{ b.date|date:"d, M, Y" }}</a>
-                        </div>
-                        <div class="blog-button">
-                            <a href="{{ b.get_absolute_url }}" class="template-btn btn-2">view more</a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-                
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer Section -->
 
