@@ -48,7 +48,7 @@ class CourseView(TemplateView,FormView):
         )
 
         whatsapp_api_url = "https://api.whatsapp.com/send"
-        phone_number = "+9037126305"  # Change to your desired phone number
+        phone_number = "+919995184291"  # Change to your desired phone number
         encoded_message = urllib.parse.quote(message)
         whatsapp_url = f"{whatsapp_api_url}?phone={phone_number}&text={encoded_message}"
 

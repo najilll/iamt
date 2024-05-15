@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Course Details page</h2>
+                    <h2>Course Details </h2>
                     <ul>
                         <li><a href="index.html">home</a></li>
                         <li>/</li>
@@ -120,7 +120,7 @@
                             <ul>
                                 {% for d in course_details %}
                                 <li style="display: flex;flex-direction: column;">
-                                    <span class="info-list"><i class="fa fa-folder-open"></i>{{d.first}}</span>
+                                    <span class="info-list"><i class="fa fa-star"></i>{{d.first}}</span>
                                     <span style="padding-left: 26px;">{{d.second}}</span>
                                 </li>
                                 {% endfor %}
