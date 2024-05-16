@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView,DetailView,ListView,CreateView
-from . models import Career, CourseOverview, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
+from . models import Career, CourseOverview, Expert, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
 from .forms import CareerForm, EnquiryForm,ContactForm
 import urllib.parse
 from django.views.generic import FormView
@@ -14,6 +14,7 @@ class IndexView(TemplateView):
         context = super().get_context_data(**kwargs)
         context["testimonial"] = Testimonial.objects.filter(is_active=True)
         context["blogs"] = Blog.objects.filter(is_active=True)
+        context["students"] = Expert.objects.filter(is_active=True)
         return context
     
 
@@ -110,15 +111,41 @@ class BlogView(ListView):
 class BlogDetailView(DetailView):
     model=Blog
     template_name = "web/blog-details.html"
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["related_blogs"] = Blog.objects.filter(is_active=True).exclude(id=self.get_object().id)
+        return context
 
 
 class CareerView(CreateView):
-    model=Career
-    template_name = "web/career.html"
-    form_class = CareerForm
+    # model=Career
+    # template_name = "web/career.html"
+    # form_class = CareerForm
 
-    def get_success_url(self):
-        return reverse_lazy('web:index')
+    # def get_success_url(self):
+    #     return reverse_lazy('web:index')
+
+    def get(self, request):
+        form = CareerForm()
+        context = {
+            "form": form,
+        }
+        return render(request, "web/career.html", context)
+
+    def post(self, request):
+        form = CareerForm(request.POST,request.FILES)
+        if form.is_valid():
+            form.save()
+            response_data = {
+                "status": "true",
+                "title": "Successfully Submitted",
+                "message": "Our team will contact you soon !!",
+                'redirect' :True
+            }
+            return JsonResponse(response_data)
+        else:
+            errors = {field: form.errors[field][0] for field in form.errors}
+            return JsonResponse({"status": "false", "errors": errors}, status=400)
 
 
 class GalleryView(TemplateView):

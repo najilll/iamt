@@ -310,9 +310,8 @@ nav {
       padding: 14px 0; } }
   .header-section .menu-area .logo-area img {
     position: absolute;
-    top: -43px;
-    -webkit-box-shadow: 5px 0 10px rgba(0, 0, 0, 0.07);
-    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.07); }
+    top: -30px;
+     }
     @media (min-width: 768px) and (max-width: 991.98px) {
       .header-section .menu-area .logo-area img {
         position: inherit; } }

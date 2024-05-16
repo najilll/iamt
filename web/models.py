@@ -108,3 +108,13 @@ class Gallery(models.Model):
 class GalleryImage(models.Model):
     gallery=models.ForeignKey(Gallery, on_delete=models.CASCADE)
     images=models.ImageField(upload_to="gallery/")
+
+
+class Expert(models.Model):
+    name = models.CharField(max_length=100)
+    position = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='students/')
+    is_active=models.BooleanField(default=True)
+    
+    def __str__(self):
+        return self.name

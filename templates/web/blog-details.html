@@ -75,49 +75,23 @@
 
                         <div class="widget-recent-post widget-style">
                             <div class="widget-title">
-                                <h4 class="title">recent posts</h4>
+                                <h4 class="title">recent blogs</h4>
                             </div>
+                            {% for b in related_blogs %}
                             <div class="single-recent-post">
                                 <div class="post-image">
-                                    <img src="assets/images/recent-post-1.png" alt="post">
+                                    <img src="{{b.image.url}}" alt="post">
                                 </div>
                                 <div class="post-content">
-                                    <span>20 Oct 2020</span>
-                                    <a href="#">plan your new business strategy</a>
+                                    <span>{{ b.date|date:"d, M, Y" }}</span>
+                                    <a href="{{ b.get_absolute_url }}">{{b.title|truncatechars:30 }}</a>
                                 </div>
                             </div>
-                            <div class="single-recent-post">
-                                <div class="post-image">
-                                    <img src="assets/images/recent-post-2.png" alt="post">
-                                </div>
-                                <div class="post-content">
-                                    <span>14 sep 2020</span>
-                                    <a href="#">how to grow your business</a>
-                                </div>
-                            </div>
-                            <div class="single-recent-post">
-                                <div class="post-image">
-                                    <img src="assets/images/recent-post-3.png" alt="post">
-                                </div>
-                                <div class="post-content">
-                                    <span>20 june 2020</span>
-                                    <a href="#">how to increase your sales</a>
-                                </div>
-                            </div>
+                            {% endfor %}
+                            
                         </div>
 
-                        <div class="widget-categories widget-style">
-                            <div class="widget-title">
-                                <h4 class="title">categories</h4>
-                            </div>
-                            <ul>
-                                <li><a href="#">accounting</a></li>
-                                <li><a href="#">art & design</a></li>
-                                <li><a href="#">development</a></li>
-                                <li><a href="#">prigramming</a></li>
-                                <li><a href="#">content writing</a></li>
-                            </ul>
-                        </div>
+                        
 
                     </aside>
                 </div>

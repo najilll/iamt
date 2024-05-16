@@ -18,11 +18,12 @@
                             <h5>useful links</h5>
                         </div>
                         <ul>
-                            <li><a href="#">privacy policy</a></li>
-                            <li><a href="#">terms of service</a></li>
-                            <li><a href="#">legal info</a></li>
-                            <li><a href="#">knowledge base</a></li>
-                            <li><a href="#">support</a></li>
+                            <li><a href="/">home</a></li>
+                            <li><a href="{% url "web:about" %}">about</a></li>
+                            <li><a href="{% url "web:course" %}">course</a></li>
+                            <li><a href="{% url "web:blog" %}">blogs</a></li>
+                            <li><a href="{% url "web:career" %}">Careers</a></li>
+                            <li><a href="{% url "web:contact" %}">contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -34,10 +35,9 @@
                         <ul>
                             <li><span class="i fa fa-envelope"></span><span
                                     class="text-lowercase margin-left-10">mail@example.com</span></li>
-                            <li><span class="i fa fa-phone"></span><span class="margin-left-10">+012 34 56
-                                    789</span></li>
-                            <li><span class="i fa fa-building"></span><span class="margin-left-10">New York, 20
-                                    South Park Avenue</span>
+                            <li><span class="i fa fa-phone"></span><span class="margin-left-10"><a href="tel:+919995184291">Call Us +919995184291</a>
+                            </span></li>
+                            <li><span class="i fa fa-building"></span><span class="margin-left-10">Pazhayangadi KONDOTTY 673638</span>
                             </li>
                         </ul>
                     </div>
@@ -67,7 +67,7 @@
             <div class="">
                 <div class="">
                     <div class="copyright-left">
-                       <center> <span>Copyright <a href="/">Scholarl</a> 2022 All Right Reserved.</span></center>
+                       <center> <span>&copy; {% now 'Y' %} IAMT - Developed by  <a href="https://gedexo.com/" target="__blank">Gedexo Technologies</a></span></center>
                     </div>
                 </div>
             </div>
