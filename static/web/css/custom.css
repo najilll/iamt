@@ -3,3 +3,17 @@
     height: 320px;
     display: block;
 }
+.pink-color{
+    background-color: #F16A6D;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+    display: inline-block;
+    padding: 14px 40px;
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    border-radius: 5px;
+}
