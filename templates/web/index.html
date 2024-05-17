@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="hero-image">
-                        <img src="{% static 'web/images/repair_courtesyTomWatsonKingCounty 1.svg' %}" alt="hero-image" class="main-image">
+                        <img src="{% static 'web/images/baner.png' %}" alt="hero-image" class="main-image">
                         <div class="shape-image">
                             <img src="{% static 'web/images/home-2-hero-shape.png' %}" alt="shape" class="hero-shape item-rotate">
                         </div>
@@ -59,21 +59,7 @@
                         <h2>Welcome to IAMT-Institute of Advanced Mobile and Tech</h2>
                         <span class="divider"></span>
                         <p>At IAMT, we are dedicated to shaping the future of mobile technology professionals. Located in Malappuram, Kerala, our institute offers top-tier training in smartphone servicing, backed by over 17 years of industry and technical expertise. Our comprehensive programs, led by certified trainers, cover advanced chip-level repairs and the latest in smartphone technology. We pride ourselves on providing a 100% job placement assurance, ensuring our graduates are equipped for success. With state-of-the-art facilities, practical on-the-job training, and additional courses in computer hardware and languages, IAMT is your gateway to a thriving career in mobile technology. Join us to transform your passion into a thriving career.</p>
-                        {% comment %} <ul class="margin-top-20">
-                            <li><span class="list-icon"><img src="{% static 'web/images/bulb-2.png' %}"
-                                        alt="icon"></span><span>Creative
-                                    Study
-                                    Pattern</span></li>
-                            <li><span class="list-icon"><img src="{% static 'web/images/plane-2.png' %}"
-                                        alt="icon"></span><span>Quick
-                                    Crash
-                                    Courses</span></li>
-                            <li><span class="list-icon"><img src="{% static 'web/images/protractor-2.png' %}"
-                                        alt="icon"></span><span>Provided
-                                    with Experimental Examples</span></li>
-                            <li><span class="list-icon"><img src="{% static 'web/images/certificate-2.png' %}"
-                                        alt="icon"></span><span>Certification Awarded</span></li>
-                        </ul> {% endcomment %}
+                        
                         <div class="about-button margin-top-40">
                             <a href="{% url "web:course" %}" class="template-btn">Explore Course</a>
                         </div>
@@ -171,7 +157,7 @@
                 </div>
                 <div class="col-lg-7  wow fadeInRight" data-wow-delay=".1s">
                     <div class="video-area">
-                        <img src="{% static 'web/images/3.png' %}" alt="image">
+                        <img src="{% static 'web/images/second.png' %}" alt="image">
                         
                     </div>
                 </div>
@@ -179,239 +165,8 @@
         </div>
     </section>
 
-    <!-- Course Section -->
-    {% comment %} <section class="course-section course-section-2 padding-top-115">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-top text-center">
-                        <h2>Professional Online Courses</h2>
-                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-top-50">
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".1s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-1.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">marketing</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">James Stewart</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
-                                    Crash Course Zen</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 12 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$15.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".2s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-2.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">development</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">John doe</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Nvidia Technologies
-                                    Practice In University</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 20 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$20.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".3s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-3.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">accounting</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">hames itewart</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Become a professional designer with
-                                    passion</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 25 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$25.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".4s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-4.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">programming</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">alice mccoy</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Grow your business by some
-                                    Technique</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 25 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$30.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".5s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-5.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">art & design</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">rames tewart</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
-                                    Crash Course Zen</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 30 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$35.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay=".6s">
-                    <div class="single-course">
-                        <div class="course-image">
-                            <img src="{% static 'web/images/course-6.png' %}" alt="image">
-                        </div>
-                        <div class="course-content">
-                            <div class="course-category">
-                                <a href="course-details.html">content Writing</a>
-                            </div>
-                            <span class="course-instructor"><a href="course-details.html">James Stewart</a></span>
-                            <h4 class="margin-top-10"><a href="course-details.html">Language Learning (15 Day)
-                                    Crash Course Zen</a></h4>
-                            <div class="course-review d-flex align-items-center margin-top-20">
-                                <div class="review-left">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star-half-o"></i></a>
-                                </div>
-                                <div class="review-right margin-left-30">
-                                    <span><b>4.5</b> (45 Reviews)</span>
-                                </div>
-                            </div>
-                            <span class="divider"></span>
-                            <div class="course-bottom d-flex align-items-center justify-content-between padding-top-20">
-                                <div class="bottom-left">
-                                    <span><i class="fa fa-clock-o"></i> 30 mins</span>
-                                </div>
-                                <div class="bottom-right">
-                                    <span class="course-price">$25.00/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> {% endcomment %}
+    
+    {% if testimonials %}
     <section class="feedback-section feedback-section-2 padding-bottom-100">
         <div class="container">
             <div class="row">
@@ -423,24 +178,26 @@
                 </div>
             </div>
             <div class="feedback-slider margin-top-30">
-                {% for t in testimonial %}
+                {% for testimonial in testimonials %}
                 <div class="single-feedback">
                     <span class="quote-icon"><i class="fa fa-quote-right"></i></span>
                     <div class="reviewer-info d-flex align-items-center">
                         <div class="reviewer-image margin-right-20">
-                            <img src="{{t.image.url}}" alt="image">
+                            <img src="{{testimonial.image.url}}" alt="image">
                         </div>
                         <div class="reviewer-text">
-                            <h4 class="title">{{t.name}}</h4>
-                            <span class="designation">{{t.position}}</span>
+                            <h4 class="title">{{testimonial.name}}</h4>
+                            <span class="designation">{{testimonial.position}}</span>
                         </div>
                     </div>
-                    <p class="margin-top-20">{{t.description}}</p>
+                    <p class="margin-top-20">{{testimonial.description}}</p>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
+    {% else %}
+    {% endif %}
     <!-- Teaching Section -->
     <section class="teaching-section">
         <div class="container">
@@ -466,28 +223,27 @@
     </section>
 
     <!-- Team Section -->
+    {% if students %}
     <section class="team-section padding-top-115 padding-bottom-90">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-top text-center">
                         <h2>Meet Our Experts</h2>
-                        <p class="margin-top-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                            eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua</p>
+                        <p class="margin-top-10">At IAMT in Malappuram, Kerala, we provide expert training in smartphone servicing with 17 years of experience and 100% job placement assurance.</p>
                     </div>
                 </div>
             </div>
             <div class="row margin-top-50">
-                {% for s in students %}
+                {% for student in students %}
                 <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay=".1s">
                     <div class="single-team-member">
                         <div class="member-image">
-                            <img src="{{s.image.url}}" alt="image" style="height: 255px;object-fit: cover;">
+                            <img src="{{student.image.url}}" alt="image" style="height: 255px;object-fit: cover;">
                         </div>
                         <div class="member-content">
-                            <h4 class="title">{{s.name}}</h4>
-                            <span>{{s.position}}</span>
+                            <h4 class="title">{{student.name}}</h4>
+                            <span>{{student.position}}</span>
                         </div>
                     </div>
                 </div>
@@ -495,12 +251,15 @@
             </div>
         </div>
     </section>
+    {% else %}
+    {% endif %}
 
     <!-- Feedback Section -->
     
 
     <!-- Blog Section -->
-    <section class="blog-section blog-section-2 padding-top-115 padding-bottom-100">
+    {% if blogs %}
+    <section class="blog-section blog-section-2 padding-bottom-100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
@@ -511,20 +270,20 @@
                 </div>
             </div>
             <div class="blog-slider margin-top-30">
-                {% for b in blogs %}
+                {% for blog in blogs %}
                 <div class="single-blog">
                     <div class="blog-image">
-                        <a href="{{ b.get_absolute_url }}"><img src="{{ b.image.url }}" alt="image"></a>
+                        <a href="{{ blog.get_absolute_url }}"><img src="{{ blog.image.url }}" alt="image"></a>
                     </div>
                     <div class="blog-content">
                         <div class="blog-title">
-                            <h4><a href="{{ b.get_absolute_url }}">{{ b.title|truncatechars:25 }}</a></h4>
+                            <h4><a href="{{ blog.get_absolute_url }}">{{ blog.title|truncatechars:20 }}</a></h4>
                         </div>
                         <div class="content-wrap">
-                            <a href="{{ b.get_absolute_url }}" class="post-tag">{{ b.date|date:"d, M, Y" }}</a>
+                            <a href="{{ blog.get_absolute_url }}" class="post-tag">{{ blog.date|date:"d, M, Y" }}</a>
                         </div>
                         <div class="blog-button">
-                            <a href="{{ b.get_absolute_url }}" class="template-btn btn-2">view more</a>
+                            <a href="{{ blog.get_absolute_url }}" class="template-btn btn-2">view more</a>
                         </div>
                     </div>
                 </div>
@@ -532,6 +291,8 @@
             </div>
         </div>
     </section> 
+    {% else %}
+    {% endif %}
 
     <!-- Footer Section -->
     

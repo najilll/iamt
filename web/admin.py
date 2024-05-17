@@ -41,14 +41,9 @@ class CareerAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "phone_number",)
     search_fields = ("name",)
 
-class GalleryImageInline(admin.TabularInline):
-    model = GalleryImage
-    extra = 1
-
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
-    inlines = (GalleryImageInline,)
-    list_display = ("name","order")
+    list_display = ("images",)
 
 @admin.register(CourseOverview)
 class CourseOverviewAdmin(admin.ModelAdmin):

@@ -1,18 +1,17 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView,DetailView,ListView,CreateView
-from . models import Career, CourseOverview, Expert, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
+from . models import CourseOverview, Expert, Gallery, Testimonial,Course,CourseDetail,CourseFeactures,Blog,Enquiry
 from .forms import CareerForm, EnquiryForm,ContactForm
 import urllib.parse
 from django.views.generic import FormView
 from django.http import JsonResponse
-from django.urls import reverse_lazy
 # Create your views here.
 
 class IndexView(TemplateView):
     template_name = "web/index.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["testimonial"] = Testimonial.objects.filter(is_active=True)
+        context["testimonials"] = Testimonial.objects.filter(is_active=True)
         context["blogs"] = Blog.objects.filter(is_active=True)
         context["students"] = Expert.objects.filter(is_active=True)
         return context
@@ -62,12 +61,14 @@ class CourseView(TemplateView,FormView):
         response_data = {"status": "false", "title": "Form validation error"}
         return JsonResponse(response_data, status=400)
 
+
 class AboutView(TemplateView):
     template_name = "web/about.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context["testimonial"] = Testimonial.objects.filter(is_active=True)
+        context["testimonials"] = Testimonial.objects.filter(is_active=True)
         context["blogs"] = Blog.objects.filter(is_active=True)
+        context["students"] = Expert.objects.filter(is_active=True)
         return context
 
 
@@ -98,15 +99,10 @@ class ContactView(TemplateView,FormView):
             return JsonResponse({"status": "false", "errors": errors}, status=400)
 
 
-
 class BlogView(ListView):
     model=Blog
     template_name = "web/blog.html"
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["blogs"] = Blog.objects.filter(is_active=True)
-    #     return context
-    
+
 
 class BlogDetailView(DetailView):
     model=Blog
@@ -117,14 +113,9 @@ class BlogDetailView(DetailView):
         return context
 
 
-class CareerView(CreateView):
-    # model=Career
-    # template_name = "web/career.html"
-    # form_class = CareerForm
-
-    # def get_success_url(self):
-    #     return reverse_lazy('web:index')
-
+class CareerView(TemplateView,FormView):
+    template_name = "web/career.html"
+    form_class = CareerForm
     def get(self, request):
         form = CareerForm()
         context = {
@@ -152,6 +143,6 @@ class GalleryView(TemplateView):
     template_name = "web/gallery.html"
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['gallery'] = Gallery.objects.all()
+        context['gallerys'] = Gallery.objects.all()
 
         return context

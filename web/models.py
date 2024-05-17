@@ -14,6 +14,7 @@ class Testimonial(models.Model):
     def __str__(self):
         return self.name
 
+    
 class Course(models.Model):
     title=models.CharField(max_length=250)
     image=models.ImageField(upload_to="course/")
@@ -22,12 +23,14 @@ class Course(models.Model):
     def __str__(self):
         return self.title
 
+
 class CourseFeactures(models.Model):
     course=models.ForeignKey(Course,on_delete=models.CASCADE)
     title=models.CharField(max_length=250,blank=True,null=True)
 
     def __str__(self):
         return self.title
+
 
 class CourseOverview(models.Model):
     CHOICE = (("overview", "Overview"), ("training_structure", "Training Structure"),("eligibility", "Eligibility"),("facilities", "Facilities"))
@@ -46,7 +49,8 @@ class CourseDetail(models.Model):
 
     def __str__(self):
         return self.first
-    
+
+
 class Blog(models.Model):
     title=models.CharField(max_length=150)
     slug = models.SlugField(max_length=100, unique=True)
@@ -59,8 +63,8 @@ class Blog(models.Model):
         return reverse("web:blog-detail", kwargs={"slug": self.slug})
     
     def __str__(self):
-        return self.title
-    
+        return self.title    
+
 
 class Enquiry(models.Model):
     QUALIFICATION_CHOICE = (("10th", "10th"), ("12th", "12th"),("Degree", "Degree"),("Diploma/ITI", "Diploma/ITI") )
@@ -73,6 +77,7 @@ class Enquiry(models.Model):
     def __str__(self):
         return self.name
     
+
 class Contact(models.Model):
     name=models.CharField(max_length=250)
     email=models.EmailField()
@@ -81,7 +86,8 @@ class Contact(models.Model):
     
     def __str__(self):
         return self.name
-    
+
+
 class Career(models.Model):
     name=models.CharField(max_length=250)
     email=models.EmailField()
@@ -91,23 +97,13 @@ class Career(models.Model):
     
     def __str__(self):
         return self.name
-    
+
+
 class Gallery(models.Model):
-    order= models.IntegerField(blank=True,null=True)
-    name = models.CharField(max_length=128)
-
-    class Meta:
-        ordering = ["order"]
-    
-    def __str__(self):
-        return self.name
-
-    def get_images(self):
-        return GalleryImage.objects.filter(gallery=self)
-
-class GalleryImage(models.Model):
-    gallery=models.ForeignKey(Gallery, on_delete=models.CASCADE)
     images=models.ImageField(upload_to="gallery/")
+
+    def __str__(self):
+        return self.images.url
 
 
 class Expert(models.Model):

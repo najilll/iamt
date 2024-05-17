@@ -77,14 +77,14 @@
                             <div class="widget-title">
                                 <h4 class="title">recent blogs</h4>
                             </div>
-                            {% for b in related_blogs %}
+                            {% for blog in related_blogs %}
                             <div class="single-recent-post">
                                 <div class="post-image">
-                                    <img src="{{b.image.url}}" alt="post">
+                                    <img src="{{blog.image.url}}" alt="post">
                                 </div>
                                 <div class="post-content">
-                                    <span>{{ b.date|date:"d, M, Y" }}</span>
-                                    <a href="{{ b.get_absolute_url }}">{{b.title|truncatechars:30 }}</a>
+                                    <span>{{ blog.date|date:"d, M, Y" }}</span>
+                                    <a href="{{ blog.get_absolute_url }}">{{blog.title|truncatechars:30 }}</a>
                                 </div>
                             </div>
                             {% endfor %}

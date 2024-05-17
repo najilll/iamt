@@ -6,7 +6,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 col-3">
                     <div class="logo-area">
-                        <a href="index.html"> <img src="{% static 'web/images/demologo.png' %}" alt="logo"></a>
+                        <a href="index.html"> <img src="{% static 'web/images/iamt_logo.svg' %}" alt="logo"></a>
                     </div>
                 </div>
                 <div class="col-lg-10 d-none d-lg-block">
@@ -42,23 +42,23 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
-                    {{ e_form.name }}
+                    {{ enquiry_form.name }}
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    {{ e_form.email }}
+                    {{ enquiry_form.email }}
                 </div>
                 <div class="form-group">
                     <label for="address">Address</label>
-                    {{ e_form.address }}
+                    {{ enquiry_form.address }}
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber">Phone Number</label>
-                    {{ e_form.phone_number }}
+                    {{ enquiry_form.phone_number }}
                 </div>
                 <div class="form-group">
                     <label for="qualification">Highest Qualification</label>
-                    {{ e_form.qualification }}
+                    {{ enquiry_form.qualification }}
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
